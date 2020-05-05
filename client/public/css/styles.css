@@ -1,0 +1,44 @@
+body {
+    margin: auto;
+    padding: 2% 5%;
+}
+
+.grid {
+  margin: 3%;
+  background-color: #0098b3;
+background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.mWeapon {
+    padding: 2% 2%;
+    /* background-color: red; */
+    position: relative;
+    display: inline-block;
+}
+
+.mWeapon-imt {
+    width: 100%;
+    /* position: absolute;
+    transform: rotate(25deg); */
+}
+
+.subGrid {
+    /* background-color: blue; */
+    position: relative;
+    display: inline-block;
+}
+
+.subWeapon {
+    /* background-color: yellow; */
+    padding: 2px;
+    height: 3.4rem;
+    position: relative;
+    display: inline-block;
+}
+
+.subWeapon-img {
+    /* width: 100%; */
+    height: 100%;
+    float: right;
+}
