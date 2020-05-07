@@ -1,18 +1,17 @@
 import React from "react";
 import SubWeapon from "./SubWeapon";
 
-const weaImgs = [];
-for (let i = 0; i < 9; i++) {
-    weaImgs.push(i);
-}
-
-function SubWeaponsBox() {
+function SubWeaponsBox(props) {
 
     return (
         <div className="col-lg-9 subGrid">
-            {weaImgs.map(weapon => {
+            {/* create each subweapon */}
+            {props.ids.map((weapon, index) => {
                 return (
-                    <SubWeapon />
+                    <SubWeapon 
+                        id={index}
+                        name={weapon}
+                    />
                 );
             })}
         </div>

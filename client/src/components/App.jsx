@@ -1,13 +1,11 @@
 import React from "react";
-import SubWeaponsBox from "./WeaponGrid/SubWeaponsBox"
-import MainWeapon from "./WeaponGrid/MainWeapon";
+import WeaponGrid from "./WeaponGrid/WeaponGrid";
 
 function App() {
     return (
         <div className="row">
             <div className="col-lg-6 grid">
-                <MainWeapon />
-                <SubWeaponsBox />
+                <WeaponGrid />
             </div>
         </div>
     );

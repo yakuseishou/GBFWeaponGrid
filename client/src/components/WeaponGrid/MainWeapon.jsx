@@ -1,9 +1,16 @@
 import React from "react";
 
-function MainWeapon() {
+function MainWeapon(props) {
+
+    function selectMH() {
+        alert("Main Hand is Clicked");
+    }
+
     return (
-        <div className="col-lg-2 mWeapon">
-            <img className="mWeapon-img" src="img\170px-Weapon_ls_1040019900.jpg"></img>  
+        <div className="col-lg-2 mWeapon" onClick={selectMH}>
+            <img className="mWeapon-img" 
+                src={"img/170px-Weapon_ls_" + props.name + ".jpg"}>
+            </img>  
         </div>
     );
 }
