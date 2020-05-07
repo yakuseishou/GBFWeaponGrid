@@ -8,7 +8,7 @@ function SubWeapon(props) {
     }
 
     return (
-        <div className="col-lg-4 subWeapon" onClick={handleClick}>
+        <div className="col-lg-4 col-sm-4 col-sm-4 col-4 subWeapon" onClick={handleClick}>
             <img className="subWeapon-img" src={"img/Weapon_m_" + props.name + ".jpg"}></img>
         </div>
     );

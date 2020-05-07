@@ -4,7 +4,7 @@ import SubWeapon from "./SubWeapon";
 function SubWeaponsBox(props) {
 
     return (
-        <div className="col-lg-9 subGrid">
+        <div className="col-lg-8 col-md-8 col-sm-8 col-8 subGrid">
             {/* create each subweapon */}
             {props.ids.map((weapon, index) => {
                 return (

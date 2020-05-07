@@ -21,6 +21,7 @@ function WeaponGrid() {
 
     return (
         <div>
+            <h1>Weapon Grid</h1>
             <MainWeapon 
                 name={mHand}
             />

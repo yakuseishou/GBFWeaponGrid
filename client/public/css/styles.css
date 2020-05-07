@@ -4,42 +4,43 @@ body {
 }
 
 .grid {
-  /* margin: 3%; */
-  background-color: #0098b3;
-  background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-color: #0098b3;
+    background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .mWeapon {
-    /* padding: 2% 2%; */
-    /* background-color: red; */
     position: relative;
     display: inline-block;
+    box-sizing: none;
+    padding: 1%;
+    margin-top: 5%;
+    vertical-align: top;
 }
 
 .mWeapon-img {
     width: 100%;
-    /* position: absolute;
-    transform: rotate(25deg); */
+    height: 100%;
 }
 
 .subGrid {
-    /* background-color: blue; */
     position: relative;
     display: inline-block;
 }
 
 .subWeapon {
-    /* background-color: yellow; */
-    /* padding: 2px; */
     height: 3.4rem;
     position: relative;
     display: inline-block;
     border-radius: 0;
+    padding: 1%;
+    margin-top: 5%;
+    box-sizing: none;
 }
 
 .subWeapon-img {
     width: 100%;
     height: 100%;
-    float: right;
+    position: absolute;
+    bottom: 20%;
 }
