@@ -9,12 +9,12 @@ function MainWeapon(props) {
 
     return (
         <div className="col-lg-3 col-md-3 col-sm-3 col-3 mWeapon" onClick={selectMH}>
-                <img className="mWeapon-img" 
-                    src={"img/170px-Weapon_ls_" + props.name + ".jpg"}>
-                </img>
-                <p>
-                    ⭐⭐⭐⭐
-                </p>
+            <img className="mWeapon-img" 
+                src={"img/mHandWeapon/170px-Weapon_ls_" + props.name + ".jpg"}>
+            </img>
+            <p>
+                ⭐⭐⭐⭐
+            </p>
         </div>
     );
 }
