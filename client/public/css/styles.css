@@ -6,9 +6,18 @@ body {
 .grid {
     border-radius: 1%;
     box-shadow: 3px 3px 5px 6px gray;
+}
+
+.weapon {
     background-color: #057852;
     background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
     margin-right: 5%;
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.summon {
+    background-color: #613a00;
+    background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
