@@ -4,7 +4,6 @@ import GridSM from "./GridSM";
 
 function  Grids() {
     const [width, setWidth] = useState(window.innerWidth);
-    console.log(width);
 
     React.useEffect(() => {
         function handleResize() {
@@ -14,7 +13,7 @@ function  Grids() {
     });
 
     function resizeWin() {
-        if (width < 850) {
+        if (width < 1000) {
             return (
                 <GridSM />
             ); 
