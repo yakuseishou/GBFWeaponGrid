@@ -1,0 +1,18 @@
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\bin\Debug\netcoreapp3.1\GBF Data Service.exe
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\bin\Debug\netcoreapp3.1\GBF Data Service.deps.json
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\bin\Debug\netcoreapp3.1\GBF Data Service.runtimeconfig.json
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\bin\Debug\netcoreapp3.1\GBF Data Service.runtimeconfig.dev.json
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\bin\Debug\netcoreapp3.1\GBF Data Service.dll
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\bin\Debug\netcoreapp3.1\GBF Data Service.pdb
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\obj\Debug\netcoreapp3.1\GBF Data Service.csprojAssemblyReference.cache
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\obj\Debug\netcoreapp3.1\staticwebassets\GBF Data Service.StaticWebAssets.Manifest.cache
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\obj\Debug\netcoreapp3.1\staticwebassets\GBF Data Service.StaticWebAssets.xml
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\obj\Debug\netcoreapp3.1\GBF Data Service.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\obj\Debug\netcoreapp3.1\GBF Data Service.AssemblyInfoInputs.cache
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\obj\Debug\netcoreapp3.1\GBF Data Service.AssemblyInfo.cs
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\obj\Debug\netcoreapp3.1\GBF Data Service.RazorTargetAssemblyInfo.cache
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\obj\Debug\netcoreapp3.1\GBF Data Service.dll
+C:\Users\Biondi\source\repos\GBFWeaponGrid\GBF Data Service\GBF Data Service\obj\Debug\netcoreapp3.1\GBF Data Service.pdb
