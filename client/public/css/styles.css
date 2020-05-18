@@ -66,12 +66,20 @@ body {
     box-shadow: 1px 1px 2px 3px #024932;
 }
 
+.itemCard {
+    margin-right: 2%;
+}
+
 .listItem {
     position: relative;
     display: inline-block;
-    margin-right: 5%
+    margin-right: 5%;
+    text-align: left;
+    line-height: 1.5rem;
+    padding-bottom: 2%;
 }
 
 .listItem-img {
-    width: 5%;
+    width: 100%;
+    padding: 0;
 }

@@ -10,11 +10,11 @@ function MainWeapon(props) {
     return (
         <div className="col-lg-3 col-md-3 col-sm-3 col-3 mWeapon" onClick={selectMH}>
             <img className="mWeapon-img" 
-                src={"img/mHandWeapon/ls_" + props.name + ".jpg"}>
+                src={"img/mHandWeapon/ls_" + props.name + ".jpg"} alt="mHandWeapon-img">
             </img>
-            <p>
+            <span role="img">
                 ⭐⭐⭐⭐
-            </p>
+            </span>
         </div>
     );
 }
