@@ -27,7 +27,7 @@ namespace GBF_Data_Service.Controllers
 
         //GET api/GBFWeapon/{id}
         [HttpGet("{id}",Name = "GetWeapon")]
-        public ActionResult<GBFWeapon> GetGBFWeaponByID(string id)
+        public ActionResult<GBFWeapon> GetGBFWeaponById(string id)
         {
             var gbfWeapon = _gbfDataService.Get(id);
 
@@ -38,5 +38,18 @@ namespace GBF_Data_Service.Controllers
             return Ok(gbfWeapon);
         }
 
+        [HttpPost]
+        public ActionResult<GBFWeapon> InsertGBFWeapon([FromBody]GBFWeapon weaponIn)
+        {
+            try
+            {
+                var gbfWeapon = _gbfDataService.Create(weaponIn);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
