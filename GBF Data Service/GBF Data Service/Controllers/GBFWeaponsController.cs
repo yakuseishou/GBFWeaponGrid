@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using GBF_Data_Service.Data;
 using GBF_Data_Service.Models;
+using GBF_Data_Service.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,26 +14,42 @@ namespace GBF_Data_Service.Controllers
     [ApiController]
     public class GBFWeaponsController : ControllerBase
     {
-        private readonly MockGBFRepo _repository = new MockGBFRepo();
+        private readonly GBFDataService _gbfDataService;
+
+        public GBFWeaponsController(GBFDataService dataService)
+        {
+            _gbfDataService = dataService;
+        }
+
         //GET api/GBFWeapon
         [HttpGet]
-        public ActionResult <IEnumerable<GBFWeapon>> GetAllGBFWeapons()
-        {
-            var gbfWeapons = _repository.GetAppCommands();
-
-            return Ok(gbfWeapons);
-        }
+        public ActionResult<List<GBFWeapon>> Get() => _gbfDataService.Get();
 
         //GET api/GBFWeapon/{id}
-        [HttpGet("{id}")]
-        public ActionResult <GBFWeapon> GetGBFWeaponByID(int id)
+        [HttpGet("{id}",Name = "GetWeapon")]
+        public ActionResult<GBFWeapon> GetGBFWeaponById(string id)
         {
-            var gbfWeapons = _repository.GetWeaponById(id);
+            var gbfWeapon = _gbfDataService.Get(id);
 
-            return Ok(gbfWeapons);
+            if (gbfWeapon == null)
+            {
+                return NotFound();
+            }
+            return Ok(gbfWeapon);
         }
 
-
-
+        [HttpPost]
+        public ActionResult<GBFWeapon> InsertGBFWeapon([FromBody]GBFWeapon weaponIn)
+        {
+            try
+            {
+                var gbfWeapon = _gbfDataService.Create(weaponIn);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
