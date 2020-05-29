@@ -16,7 +16,6 @@ namespace GBF_Data_Service.Services
         {
 
             var client = new MongoClient(settings.ConnectionString);
-            var dbList = client.ListDatabases().ToList();
             var database = client.GetDatabase(settings.DatabaseName);
 
             _gbfWeapons = database.GetCollection<GBFWeapon>(settings.GBFCollectionName);

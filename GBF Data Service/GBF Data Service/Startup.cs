@@ -35,24 +35,19 @@ namespace GBF_Data_Service
 
             services.AddSingleton<GBFDataService>();
 
-            services.AddControllers();
-
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
-                    builder =>
-                    {
-                        builder
-                        .AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader();
-                    });
+                                  builder =>
+                                  {
+                                      builder
+                                      .AllowAnyOrigin()
+                                      .AllowAnyMethod()
+                                      .AllowAnyHeader();
+                                  });
             });
 
-            services.Configure<MvcOptions>(options =>
-            {
-                options.Filters.Add(new CorsAuthorizationFilterFactory("AllowAll"));
-            });
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,8 +70,6 @@ namespace GBF_Data_Service
             {
                 endpoints.MapControllers();
             });
-
-            app.UseMvc();
         }
     }
 }
