@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,7 +9,10 @@ namespace GBF_Data_Service.Models
 {
     public class GBFWeapon
     {
-        public int weaponId { get; set; } = 1;
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string id { get; set; }
+        public string weaponId { get; set; } = "1";
         public String weaponName { get; set; } = "Gisla";
         public String weaponType { get; set; } = "Sword";
         public int attackPoint { get; set; } = 999999;

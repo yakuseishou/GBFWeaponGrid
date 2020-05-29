@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GBF_Data_Service.Data;
+using GBF_Data_Service.Models;
+using GBF_Data_Service.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace GBF_Data_Service
 {
@@ -25,6 +29,12 @@ namespace GBF_Data_Service
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<GBFDatabaseSettings>(Configuration.GetSection(nameof(GBFDatabaseSettings)));
+
+            services.AddSingleton<IGBFDatabaseSettings>(sp => sp.GetRequiredService<IOptions<GBFDatabaseSettings>>().Value);
+
+            services.AddSingleton<GBFDataService>();
+
             services.AddControllers();
         }
 
