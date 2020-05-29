@@ -11,12 +11,13 @@ function SearchBar() {
     ]);
 
     return (
-        <nav class="navbar navbar-dark bg-dark">
+        <nav className="navbar navbar-dark bg-dark">
             <form>
-                <div class="form-row">
+                <div className="form-row">
                     {searchBar.map(item => {
                         return (
                             <SearchProperty
+                                key={item.name}
                                 name={item.name}
                                 lists={item.content}
                         />);

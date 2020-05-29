@@ -8,7 +8,8 @@ function SubSummonBox(props) {
             {/* create each subSummon */}
             {props.ids.map((name, index) => {
                 return (
-                    <SubSummon 
+                    <SubSummon
+                        key={index}
                         id={index}
                         name={name}
                     />

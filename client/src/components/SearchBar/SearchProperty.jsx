@@ -3,15 +3,15 @@ import PropertyList from "./PropertyList";
 
 function SearchProperty(props) {
 
-    console.log(props.name);
     return (
-        <div class="col-auto my-1">
-            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">{props.name}</label>
-            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                <option selected>{props.name}</option>
+        <div className="col-auto my-1">
+            <label className="mr-sm-2 sr-only" htmlFor="inlineFormCustomSelect">{props.name}</label>
+            <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option>{props.name}</option>
                 {props.lists.map((cont, index) => {
                     return (
-                        <PropertyList 
+                        <PropertyList
+                        key={index}
                         name={cont}
                         value={index + 1}
                     />);

@@ -8,7 +8,8 @@ function SubWeaponsBox(props) {
             {/* create each subweapon */}
             {props.ids.map((weapon, index) => {
                 return (
-                    <SubWeapon 
+                    <SubWeapon
+                        key={index}
                         id={index}
                         name={weapon}
                     />

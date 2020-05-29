@@ -10,20 +10,20 @@ function Item(props) {
             <div className="row">
                 <div className={"listItem " + colClass} >
                         <img className="listItem-img" 
-                            src={"img/subWeapon/m" + props.src + ".jpg"} alt="weaponImg" />
-                    <div className={item}>{props.info.name}</div>
+                            src={props.info.imgUrl} alt="weaponImg" />
+                    <div className={item}>{props.info.weaponName}</div>
                 </div>
                 <div className={"listItem " + colClass} >
                     <div className={item}>Element: {props.info.element}</div>
-                    <div className={item}>skill1: {props.info.atk}</div>
+                    <div className={item}>skill1: {props.info.weaponSkill1}</div>
                 </div>
                 <div className={"listItem " + colClass} >
-                    <div className={item}>Proficiency: {props.info.element}</div>
-                    <div className={item}>skill2: {props.info.hp}</div>
+                    <div className={item}>Proficiency: {props.info.weaponType}</div>
+                    <div className={item}>skill2: {props.info.weaponSkill2}</div>
                 </div>
                 <div className={"listItem " + colClass} >
-                    <div className={item}>C.A. Atk: {props.info.element}</div>
-                    <div className={item}>skill3: {props.info.hp}</div>
+                    <div className={item}>C.A. Atk: {props.info.ougiAbilityDescription}</div>
+                    <div className={item}>skill3: {props.info.weaponSkill3}</div>
                 </div>
             </div>
         </div>
