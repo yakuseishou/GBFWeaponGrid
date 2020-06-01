@@ -22,8 +22,8 @@ function Item(props) {
                     <div className={item}>skill2: {props.info.weaponSkill2}</div>
                 </div>
                 <div className={"listItem " + colClass} >
-                    <div className={item}>C.A. Atk: {props.info.ougiAbilityDescription}</div>
                     <div className={item}>skill3: {props.info.weaponSkill3}</div>
+                    {/* <div className={item}>C.A. Atk: {props.info.ougiAbilityDescription}</div> */}
                 </div>
             </div>
         </div>

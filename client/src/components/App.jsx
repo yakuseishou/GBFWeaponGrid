@@ -1,15 +1,13 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Grids from "./Grids";
-import SearchBar from "./SearchBar";
-import ItemList from "./itemList/ItemList";
+import Search from "./Search";
 
 
 function App() {
     return (
         <div>
-            <Grids />
-            <SearchBar />
-            <ItemList />
+          <Grids />
+          <Search />
         </div>
     );
 }
