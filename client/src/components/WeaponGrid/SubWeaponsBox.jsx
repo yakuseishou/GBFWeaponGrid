@@ -12,6 +12,8 @@ function SubWeaponsBox(props) {
                         key={index}
                         id={index}
                         name={weapon}
+                        selected={props.selected}
+                        handleSelect={props.handleSelect}
                     />
                 );
             })}

@@ -2,15 +2,13 @@ import React from "react";
 
 function MainWeapon(props) {
 
-    /* function to handle when main hand is clicked */
-    function selectMH() {
-        alert("Main Hand is Clicked");
-    }
-
+// (props.id === props.selected) ? {width: "100%", height: "100%"} : {width: "70%", height: "70%"}
     return (
-        <div className="col-lg-3 col-md-3 col-sm-3 col-3 mWeapon" onClick={selectMH}>
-            <img className="mWeapon-img" 
-                src={"img/mHandWeapon/ls_" + props.name + ".jpg"} alt="mHandWeapon-img">
+        <div className="col-lg-3 col-md-3 col-sm-3 col-3 mWeapon">
+            <img className={(props.name != props.selected) ? "mWeapon-img" : "mWeapon-img Grid-img-border"}
+                name={props.name}
+                onClick={props.handleSelect}
+                src={"img/mHandWeapon/ls_" + props.id + ".jpg"} alt="mHandWeapon-img">
             </img>
             <span role="img">
                 ⭐⭐⭐⭐
