@@ -13,15 +13,7 @@ function  Grids() {
     });
 
     function resizeWin() {
-        if (width < 1000) {
-            return (
-                <GridSM />
-            ); 
-        } else {
-            return (
-                <GridLG />
-            );    
-        }
+        return (width < 1000) ? <GridSM /> : <GridLG />;
     }
 
     return (

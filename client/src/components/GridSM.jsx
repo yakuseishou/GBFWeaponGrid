@@ -15,7 +15,7 @@ function  GridSM() {
 
     return (
         <div className="row">
-            <div className={"col-md-6 col-sm-7 col-10 grid grid-sm " + grid}>
+            <div className={"col-md-6 col-sm-7 col-10 grid " + grid}>
                 <div id="carouselExampleControls" className="carousel slide" data-interval="false">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
