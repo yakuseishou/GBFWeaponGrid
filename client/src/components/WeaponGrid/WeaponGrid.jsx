@@ -1,8 +1,13 @@
 import React, {useState} from "react";
 import MainWeapon from "./MainWeapon";
 import SubWeaponsBox from "./SubWeaponsBox";
+import PropertyList from "../SearchBar/PropertyList";
 
-function WeaponGrid() {
+// listSelected={props.listSelected}
+// selectedId={props.selectedId}
+// gridSelected={props.gridSelected}
+// handleGrid={props.handleGrid}
+function WeaponGrid(props) {
     /* default img should change to empty img */
     const [emptySlot] = useState("1040019900");
 
@@ -14,6 +19,9 @@ function WeaponGrid() {
     function handleSelect(event) {
         const { name } = event.target;
         (selected === name) ? setSelected(-1) : setSelected(name);
+        if (props.listSelected) {
+            subs[name] = props.selectedId;
+        }
     }
 
     /* array for SubWeapon id might change it to object 
@@ -25,13 +33,13 @@ function WeaponGrid() {
         }
         return (array);
     });
-    
+
     return (
         <div>
             <h1>Weapon Grid</h1>
             <MainWeapon 
                 id={mHand}
-                name={10}
+                name={9}
                 selected={selected}
                 handleSelect={handleSelect}
             />

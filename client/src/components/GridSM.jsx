@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import WeaponGrid from "./WeaponGrid/WeaponGrid";
 import SummonGrid from "./Summon/SummonGrid";
 
-function  GridSM() {
+function  GridSM(props) {
     const [grid, setGrid] = useState("weapon");
 
     function switchGrid() {
@@ -19,7 +19,12 @@ function  GridSM() {
                 <div id="carouselExampleControls" className="carousel slide" data-interval="false">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <WeaponGrid />
+                            <WeaponGrid 
+                                listSelected={props.listSelected}
+                                selectedId={props.selectedId}
+                                gridSelected={props.gridSelected}
+                                handleGrid={props.handleGrid}
+                            />
                         </div>
                         <div className="carousel-item">
                             <SummonGrid />

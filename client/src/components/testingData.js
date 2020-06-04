@@ -96,7 +96,24 @@ const Weapons =
         "ougiAbilityDescription": "Massive Dark Damage to one enemy. Inflict blind",
         "uncapLevel": 4,
         "imgUrl": "https://gbf.wiki/Gisla#/media/File:Weapon_b_1040200700.png"
-    }
+    },
+    {
+        "id": "1040019900",
+        "weaponId": "1",
+        "weaponName": "default",
+        "weaponType": "Sword",
+        "attackPoint": 999999,
+        "hitPoint": 9999,
+        "element": "light",
+        "weaponLevel": 150,
+        "weaponSkillLevel": 15,
+        "weaponSkill1": "Enmity",
+        "weaponSkill2": "",
+        "weaponSkill3": "",
+        "ougiAbilityDescription": "Massive Dark Damage to one enemy. Inflict blind",
+        "uncapLevel": 4,
+        "imgUrl": "img/subWeapon/m1040019900.jpg"
+    },
 ]
 
 // const Summons = [

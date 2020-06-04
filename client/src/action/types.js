@@ -1,0 +1,2 @@
+export const GET_WEAPONS = "GET_WEAPONS";
+export const WEAPON_LOADING = "WEAPON_LOADING";

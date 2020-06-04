@@ -6,10 +6,10 @@ import Item from "./Item";
 function ItemList(props) {
     const [checked, setChecked] = useState("");
 
-
     function handleCheck(event) {
             const { name } = event.target;
             (checked === name) ? setChecked("") : setChecked(name);
+            props.setlistSelected(name);        
     }
     
     return (

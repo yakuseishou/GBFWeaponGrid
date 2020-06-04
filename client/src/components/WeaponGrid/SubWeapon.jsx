@@ -1,6 +1,11 @@
 import React from "react";
+// import Weapons from "../testingData";
 
 function SubWeapon(props) {
+    // const [url, setUrl] = useState(() => {
+    //     const weapon = Weapons.find(item => item.id ="")
+    // });
+
     return (
         <div className="col-lg-4 col-sm-4 col-sm-4 col-4 subWeapon">
             <div>
