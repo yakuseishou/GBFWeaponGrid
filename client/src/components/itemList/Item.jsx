@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 const colNum = 2;
 const colNum1 = 3;
@@ -9,6 +9,7 @@ const item = "shadow-sm mb-2 bg-white rounded";
 const col = "col-12 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 shadow p-2 mb-3 bg-white rounded itemCard";
 
 function Item(props) {
+
     return (
         <div className={(props.id != props.checked) ? col : col + " Grid-img-border"} >
             <div className="row">

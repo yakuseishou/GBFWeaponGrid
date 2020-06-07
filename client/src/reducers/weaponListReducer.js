@@ -8,6 +8,7 @@ const INITIAL_STATE = {
 
 function weaponListReducer(state = INITIAL_STATE, action) {
     switch(action.type) {
+        /* Need to change get weapons to filter according to search */
         case GET_WEAPONS:
             return {
                 ...state,

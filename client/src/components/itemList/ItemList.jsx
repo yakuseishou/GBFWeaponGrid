@@ -1,17 +1,25 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
 import Item from "./Item";
-// import Weapon from "../testingData";
 
 
 function ItemList(props) {
-    const [checked, setChecked] = useState("");
 
-    function handleCheck(event) {
-            const { name } = event.target;
-            (checked === name) ? setChecked("") : setChecked(name);
-            props.setlistSelected(name);        
-    }
+    const selectedWeapon = useSelector(state => state.selectedWeapon);
+    const dispatch = useDispatch();
     
+    function handleCheck(event) {
+        const { name, src } = event.target;
+
+        dispatch({
+            type: "WEAPON_SELECTED",
+            payload: {
+              name: name,
+              src: src
+            }
+          });  
+    }
+
     return (
         <div className="row">
             {props.weapons.map((item => {
@@ -20,7 +28,7 @@ function ItemList(props) {
                         key={item.id}
                         id={item.id}
                         info={item}
-                        checked={checked}
+                        checked={selectedWeapon.weaponId}
                         handleCheck={handleCheck}
                     />
                 );

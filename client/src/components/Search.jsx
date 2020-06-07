@@ -6,17 +6,18 @@ import ItemList from "./itemList/ItemList";
 import { useSelector, useDispatch } from 'react-redux';
 import { getWeapons } from '../action/weaponListActions';
 
-import Weapons from "./testingData";
-
 
 function Search(props) {
 
-    const [searchSetting, setSearchSetting] = useState([]);
-    // // const [error, setError] = useState(null);
-    // const [isLoaded, setIsLoaded] = useState(false);
     const { weapons } = useSelector(state => ({
         ...state.weapons,
     }));
+    
+    const dispatch = useDispatch();
+    
+    // // const [error, setError] = useState(null);
+    // const [isLoaded, setIsLoaded] = useState(false);
+    const [searchSetting, setSearchSetting] = useState([]);
 
     // const [weapons, setweapons] = useState(Weapons);
     // const [defaultWeapons, setdefaultdefaultWeapons] = useState([]);
@@ -72,7 +73,6 @@ function Search(props) {
             />
             <ItemList
                 weapons={weapons}
-                setlistSelected={props.setlistSelected}
             />
         </div>
     );

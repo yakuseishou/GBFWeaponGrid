@@ -1,50 +1,46 @@
 import React, {useState} from "react";
 import MainWeapon from "./MainWeapon";
 import SubWeaponsBox from "./SubWeaponsBox";
-import PropertyList from "../SearchBar/PropertyList";
+import { useSelector, useDispatch } from 'react-redux';
 
-// listSelected={props.listSelected}
-// selectedId={props.selectedId}
-// gridSelected={props.gridSelected}
-// handleGrid={props.handleGrid}
-function WeaponGrid(props) {
-    /* default img should change to empty img */
-    const [emptySlot] = useState("1040019900");
+function WeaponGrid() {
 
-    /* mHand saves main weapon id and setHand will be a function to update it*/
-    const [mHand, setMHand] = useState(emptySlot);
+    const gridWeapons = useSelector(state => state.weaponGrid);
+    const selectedWeapon = useSelector(state => state.selectedWeapon);
 
     const [selected, setSelected] = useState(-1);
+    const dispatch = useDispatch();
 
     function handleSelect(event) {
         const { name } = event.target;
         (selected === name) ? setSelected(-1) : setSelected(name);
-        if (props.listSelected) {
-            subs[name] = props.selectedId;
+        if(selectedWeapon.selected && selected) {
+            dispatch({
+                type: "GRIDWEAPON_UPDATE",
+                payload: {
+                    weaponGridId: name,
+                    weaponInfo: {
+                        weaponId: selectedWeapon.weaponId,
+                        imgurl: selectedWeapon.weaponUrl
+                    }
+                }
+            }); 
         }
     }
 
-    /* array for SubWeapon id might change it to object 
-    so it can also hold infor for which sub weapon it is on the grid */
-    const [subs, setSubs] = useState(() => {
-        const array = [];
-        for (let i = 0; i < 9; i++) {
-            array.push(emptySlot);
-        }
-        return (array);
-    });
+
 
     return (
         <div>
             <h1>Weapon Grid</h1>
-            <MainWeapon 
-                id={mHand}
-                name={9}
+            <MainWeapon
+                id={gridWeapons[0].weaponGridId}
+                imgurl={gridWeapons[0].weaponInfo.imgurl}
                 selected={selected}
                 handleSelect={handleSelect}
             />
             <SubWeaponsBox
-                ids={subs}
+                weapons={gridWeapons}
                 selected={selected}
                 handleSelect={handleSelect}
             />
