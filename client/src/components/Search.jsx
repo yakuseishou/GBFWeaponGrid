@@ -12,30 +12,23 @@ function Search(props) {
     const search = useSelector(state => state.search);
 
     const dispatch = useDispatch();
-    
-    const [searchSetting, setSearchSetting] = useState([]);
 
     function setSearch(event) {
         const { name, value } = event.target;
-        if (name != value) {
-
-            setSearchSetting(prev => {
-                return ({
-                    ...prev,
-                    [name]: value
-                })
-            });
-        } else {
-            delete searchSetting[name];
-        }
+        dispatch({
+            type: "UPDATE_SEARCH",
+            payload: {
+                name: name,
+                value: value
+            }
+        });
     }
     
     function filterWeapon(event) {
-        // setweapons(() => {
-        //         return props.defaultWeapons.filter((item) => {
-        //             return item == ;
-        //     });
-        // });
+        dispatch({
+            type: "FILTER_WEAPONS",
+            payload: search
+        })
         event.preventDefault();        
     };
 

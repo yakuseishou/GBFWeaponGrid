@@ -4,8 +4,8 @@ import SearchProperty from "./SearchBar/SearchProperty";
 
 function SearchBar(props) {
     const [searchBar] = useState([
-        {name: "Element", content: ["Fire", "Water", "Earth", "Wind", "Light", "Dark"]}, 
-        {name: "Proficiency", content: ["Sabre", "Dagger", "Spear", "Axe", "Staff", "Gun", "Melee", "Bow", "Harp", "Katana"]},
+        {name: "element", content: ["Fire", "Water", "Earth", "Wind", "Light", "Dark"]}, 
+        {name: "weaponType", content: ["Sword", "Dagger", "Spear", "Axe", "Staff", "Gun", "Melee", "Bow", "Harp", "Katana"]},
         {name: "UncapLv", content: [0, 1, 2, 3, 4]}
         // {name: "Series", content: ["Grand", etc...]}, 
     ]);

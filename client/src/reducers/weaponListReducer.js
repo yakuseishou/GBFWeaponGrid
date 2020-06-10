@@ -1,5 +1,5 @@
 import {GET_WEAPONS, WEAPON_LOADING} from "../action/types"
-import Weapons from "../components/testingData";
+import Weapons from "../components/testingData.js";
 
 const INITIAL_STATE = {
     weapons: Weapons,
@@ -9,13 +9,20 @@ const INITIAL_STATE = {
 function weaponListReducer(state = INITIAL_STATE, action) {
     switch(action.type) {
         /* Need to change get weapons to filter according to search */
-        case GET_WEAPONS:
+        case "FILTER_WEAPONS":
+            let updated = Weapons;
+
+            for (const [key, value] of Object.entries(action.payload)) {
+                updated = updated.filter(weapon => {
+                    return weapon[key] == value;
+                })
+            }
+            console.log(updated);
             return {
                 ...state,
-                weapons: action.payload,
-                loading: false
-            }
-        case WEAPON_LOADING:
+                weapons: updated
+            };
+        case "WEAPON_LOADING":
             return {
                 ...state,
                 loading: true

@@ -1,6 +1,8 @@
 body {
     margin: 2% 5%;
-    background-color: rgb(171, 232, 250);
+    background-color: #98d6ea;
+    background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .grid {
@@ -31,8 +33,8 @@ body {
 }
 
 .summon {
-    background-color: #743c08;
-    background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
+    background-color: #e3c4a8;
+    background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
