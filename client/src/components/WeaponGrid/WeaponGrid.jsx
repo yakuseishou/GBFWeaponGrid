@@ -7,14 +7,15 @@ function WeaponGrid() {
 
     const gridWeapons = useSelector(state => state.weaponGrid);
     const selectedWeapon = useSelector(state => state.selectedWeapon);
+    const gridSelectedWeapon = useSelector(state => state.gridSelectedWeapon);
 
-    const [selected, setSelected] = useState(-1);
     const dispatch = useDispatch();
 
     function handleSelect(event) {
         const { name } = event.target;
-        (selected === name) ? setSelected(-1) : setSelected(name);
-        if(selectedWeapon.selected && selected) {
+
+        dispatch({type: "GRIDWEAPON_SELECTED", payload: name});
+        if (selectedWeapon.selected && !gridSelectedWeapon.selected) {
             dispatch({
                 type: "GRIDWEAPON_UPDATE",
                 payload: {
@@ -24,25 +25,26 @@ function WeaponGrid() {
                         imgurl: selectedWeapon.weaponUrl
                     }
                 }
-            }); 
-        }
+            });
+            dispatch({type: "RESET_SELECTEDGRIDWEAPON"});
+            dispatch({type: "RESET_SELECTEDWEAPON"});
+        }  
     }
-
 
 
     return (
         <div>
-            <h1>Weapon Grid</h1>
-            <MainWeapon
-                id={gridWeapons[0].weaponGridId}
-                imgurl={gridWeapons[0].weaponInfo.imgurl}
-                selected={selected}
-                handleSelect={handleSelect}
+        <h1>Weapon Grid</h1>
+        <MainWeapon
+            id={gridWeapons[0].weaponGridId}
+            imgurl={gridWeapons[0].weaponInfo.imgurl}
+            selected={gridSelectedWeapon.weaponGridId}
+            handleSelect={handleSelect}
             />
-            <SubWeaponsBox
-                weapons={gridWeapons}
-                selected={selected}
-                handleSelect={handleSelect}
+        <SubWeaponsBox
+            weapons={gridWeapons}
+            selected={gridSelectedWeapon.weaponGridId}
+            handleSelect={handleSelect}
             />
         </div>
     );

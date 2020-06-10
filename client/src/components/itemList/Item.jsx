@@ -18,13 +18,6 @@ function Item(props) {
                             name={props.id}
                             onClick={props.handleCheck}
                             src={props.info.imgUrl} alt="weaponImg" />
-                        {/* <input name={props.id} 
-                            className="checkbox"
-                            checked={(props.id === props.checked)} 
-                            onChange={props.handleCheck} 
-                            type="checkbox" 
-                            aria-label="Checkbox for following text input">
-                        </input> */}
                 </div>
                 <div className={"listItem " + colClass} >
                     <div className={item}>{props.info.weaponName}</div>
@@ -37,7 +30,6 @@ function Item(props) {
                 <div className={"listItem " + colClass} >
                     <div className={item}>Proficiency: {props.info.weaponType}</div>
                     <div className={item}>skill3: {props.info.weaponSkill3}</div>
-                    {/* <div className={item}>C.A. Atk: {props.info.ougiAbilityDescription}</div> */}
                 </div>
             </div>
         </div>

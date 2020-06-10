@@ -1,5 +1,3 @@
-// import {GET_SELECTEDWEAPON, WEAPON_SELECTED} from "../action/types"
-
 const INITIAL_STATE = {
     weaponId: "",
     weaponUrl: "",
@@ -8,8 +6,8 @@ const INITIAL_STATE = {
 
 function weaponSelectReducer(state = INITIAL_STATE, action) {
     switch(action.type) {
-        case "GET_SELECTEDWEAPON":
-            return state;
+        case "RESET_SELECTEDWEAPON":
+            return INITIAL_STATE;
         case "WEAPON_SELECTED":
             if (state.weaponId != action.payload.name) {
                 return {

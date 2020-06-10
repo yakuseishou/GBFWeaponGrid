@@ -25,13 +25,13 @@ body {
 }
 
 .weapon {
-    background-color: #057852;
+    background-color: #36846b;
     background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .summon {
-    background-color: #613a00;
+    background-color: #743c08;
     background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
@@ -97,4 +97,8 @@ body {
 
 .listItem-img {
     width: 100%;
+}
+
+.listItem-img:hover {
+    opacity: 0.5;
 }
