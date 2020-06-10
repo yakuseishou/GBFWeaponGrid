@@ -17,7 +17,6 @@ function weaponListReducer(state = INITIAL_STATE, action) {
                     return weapon[key] == value;
                 })
             }
-            console.log(updated);
             return {
                 ...state,
                 weapons: updated
